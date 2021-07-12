@@ -1,1 +1,24 @@
-<h3>aulas-detail works</h3>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Data</th>
+        <th scope="col">Matéria</th>
+        <th scope="col">Compromisso</th>
+        <th scope="col">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let aula of aulas">
+        <th scope="row">{{ aula.data }}</th>
+        <td>{{ aula.materia }}</td>
+        <td>{{ aula.compromisso }}</td>
+        <td>{{ aula.status }}</td>
+        <td>
+            <span>
+                <button class="btn btn-primary">editar</button>
+                <button class="btn btn-danger">excluir</button>
+            </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>

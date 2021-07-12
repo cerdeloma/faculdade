@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Service } from 'src/app/shared/service';
 
 @Component({
   selector: 'app-aulas-detail',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AulasDetailComponent implements OnInit {
 
-  constructor() { }
+  aulas: any;
+
+  constructor(private service: Service) { }
 
   ngOnInit(): void {
+    this.getAula();
+  }
+
+  getAula() {
+    this.service.getAulas()
+    .subscribe(dados => this.aulas = dados)
   }
 
 }

@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { AulasModule } from './aulas/aulas.module';
+import { Service } from './shared/service';
 
 
 @NgModule({
@@ -13,7 +14,7 @@ import { AulasModule } from './aulas/aulas.module';
     BrowserModule,
     AulasModule
   ],
-  providers: [],
+  providers: [Service],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
